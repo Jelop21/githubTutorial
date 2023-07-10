@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+****HTML****
+
+<h1>Your Lucky Color</h1>
+
+    <select id="zodiac">
+        <option value="">Choose Zodiac</option>
+        <option value="aries">Aries</option>
+        <option value="tarus">Tarus</option>
+        <option value="gemini">Gemini</option>
+        <option value="cancer">Cancer</option>
+        <option value="leo">Leo</option>
+        <option value="virgo">Virgo</option>
+        <option value="libra">Libra</option>
+        <option value="scorpio">Scorpio</option>
+        <option value="sagittarius">Sagittarius</option>
+        <option value="aquarius">Aquarius</option>
+        <option value="capricorn">Capricorn</option>
+        <option value="pisces">Pisces</option>
+
+    </select>
+    <button onclick="changeBackground()">Get Color</button>
+</body>
+<script src="pp1.js"></script>
+
+****CSS****
+*{
+    margin: 0;
+    padding: 0;
+}
+
+h1{
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 30px 0;
+    color:#fff;
+    padding : 10px;
+    background-color: rgb(50, 50, 50);
+}
+
+select,button{
+    cursor: pointer;
+    border: none;
+    outline: none;
+    margin: 30px 0;
+    color: #fff;
+    padding: 10px;
+    font: 100 1.2rem sans-serif;
+    background-color: rgb(50, 50, 50);
+}
+
+button{
+    background-color: rgb(53, 34, 201);
+}
+
+****JAVASCRIPT****
+
+const zodiac = document.getElementById("zodiac");
+
+const body = document.body;
+
+const changeBackground = () => {
+    switch (zodiac.value) {
+        case "aries":
+            body.style.backgroundColor = "#fc0303";
+            break;
+        case "tarus":
+            body.style.backgroundColor = "#03fc6f";
+            break;
+        case "gemini":
+            body.style.backgroundColor = "#fce514";
+            break;
+        case "cancer":
+            body.style.backgroundColor = "navy";
+            break;
+        case "leo":
+            body.style.backgroundColor = "#fc1234";
+            break;
+        case "virgo":
+            body.style.backgroundColor = "#fff567";
+            break;
+        case "libra":
+            body.style.backgroundColor = "#987cfd";
+            break;
+        case "scorpio":
+            body.style.backgroundColor = "tomato";
+            break;
+        case "sagittarius":
+            body.style.backgroundColor = "blue";
+            break;
+        case "aquarius":
+            body.style.backgroundColor = "#579eeb";
+            break;
+        case "capricorn":
+            body.style.backgroundColor = "#fc88d8";
+            break;
+        case "pisces":
+            body.style.backgroundColor = "#eb8d57";
+            break;
+    
+        default:
+            break;
+    }
+}
+
+</html>
